@@ -35,7 +35,6 @@ export function UIKit(): JSX.Element {
             UI Kit
           </Heading>
           <br />
-          <hr />
           <h2 id='typography'>Typography</h2>
           <br />
           <h3 id='headings'>Headings</h3>
@@ -49,7 +48,6 @@ export function UIKit(): JSX.Element {
           <Heading as='h3' level='three'>
             Modal Heading
           </Heading>
-          <hr />
           <p id='nav-text'>Nav Text:</p>
           <br />
           <Text
@@ -62,7 +60,6 @@ export function UIKit(): JSX.Element {
             Nav Item
           </Text>
           <br />
-          <hr />
           <br />
           <p id='detail-text'>Detail Text:</p>
           <br />
@@ -106,7 +103,6 @@ export function UIKit(): JSX.Element {
             Text Link Component
           </Text>
           <br />
-          <hr />
           <br />
           <h2 id='buttons'>Buttons</h2>
           <br />
@@ -174,7 +170,6 @@ export function UIKit(): JSX.Element {
           >
             <Icon style='icon-back' color='brand-red' size='lg' space='right' />
           </Button>
-          <hr />
           <br />
           <h2 id='avatar'>Avatar</h2>
           <br />
