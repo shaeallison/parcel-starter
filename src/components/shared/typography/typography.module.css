@@ -3,7 +3,6 @@
   Component Styles
 */
 
-/* Page Title */
 .one {
   font-size: 2.4rem;
   font-weight: 700;
@@ -11,7 +10,6 @@
   line-height: 1;
 }
 
-/* Page Subheading and Card Title */
 .two {
   font-size: 2rem;
   font-weight: 700;
@@ -19,7 +17,6 @@
   line-height: 1.2;
 }
 
-/* Modal Title */
 .three {
   font-size: 2.2rem;
   font-weight: 700;
@@ -27,7 +24,6 @@
   line-height: 1;
 }
 
-/* Lonely list */
 .four {
   font-size: 1.8rem;
   font-weight: 600;
@@ -40,21 +36,15 @@
   Component Styles
 */
 
-/* Avatar, List Aggregate Data, Saved Status, Address */
 .detail {
   font-size: 1.5rem;
   letter-spacing: -0.01rem;
-  line-height: 1.73; /* needed for address text -- move to company scss if needed */
+  line-height: 1.73;
   text-align: left;
 
   b {
     font-weight: 600;
   }
-}
-
-.note {
-  font-size: 1.3rem;
-  font-weight: 400;
 }
 
 .nav-text {
@@ -73,4 +63,16 @@
 
 .link {
   text-decoration: underline;
+}
+
+.list {
+  padding-left: 2rem;
+
+  &.unordered {
+    list-style: circle;
+  }
+
+  &.ordered {
+    list-style: number;
+  }
 }

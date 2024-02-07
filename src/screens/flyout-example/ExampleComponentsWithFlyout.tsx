@@ -38,6 +38,7 @@ export const ExampleComponentsWithFlyout = (): JSX.Element => {
     <>
       Account
       <br />
+      <br />
       <div className={styles.container}>
         <Button as='button' style='icon-only' onClick={toggleAccountFlyout}>
           <Text as='div' style='detail' color='dark-blue'>
@@ -87,6 +88,7 @@ export const ExampleComponentsWithFlyout = (): JSX.Element => {
       <br />
       <br />
       Default
+      <br />
       <br />
       <div className={styles.container}>
         <Button as='button' style='icon-only' onClick={toggleDefaultFlyout}>
@@ -154,99 +156,10 @@ export const ExampleComponentsWithFlyout = (): JSX.Element => {
       </div>
       <br />
       <br />
-      Contact (default)
-      <br />
-      <div className={styles.container}>
-        <Button as='button' style='icon-only' onClick={toggleContactFlyout}>
-          <Icon style='icon-menu' color='icon-default' size='xl' />
-        </Button>
-        <div className={styles['default-wrapper']}>
-          <Flyout
-            type='default'
-            isOpen={contactFlyoutOpen}
-            setIsOpen={setContactFlyoutOpen}
-            width='lg'
-          >
-            <ul>
-              <li key='item-1' className={sharedStyles['flyout-item']}>
-                <Button
-                  as='button'
-                  style='icon-only'
-                  onClick={() => {
-                    console.log('trigger edit mode')
-                  }}
-                >
-                  <Icon
-                    style='icon-edit'
-                    color='brand-red'
-                    size='md'
-                    space='right'
-                  />
-                  <Text
-                    as='span'
-                    style='detail'
-                    color='dark-blue'
-                    weight='semibold'
-                  >
-                    Edit Contact
-                  </Text>
-                </Button>
-              </li>
-              <li key='item-2' className={sharedStyles['flyout-item']}>
-                <Button
-                  as='button'
-                  style='icon-only'
-                  onClick={() => {
-                    console.log('trigger DBA modal')
-                  }}
-                >
-                  <Icon
-                    style='icon-add-to-dba'
-                    color='brand-red'
-                    size='md'
-                    space='right'
-                  />
-                  <Text
-                    as='span'
-                    style='detail'
-                    color='dark-blue'
-                    weight='semibold'
-                  >
-                    Add DBA
-                  </Text>
-                </Button>
-              </li>
-              <li key='item-3' className={sharedStyles['flyout-item']}>
-                <Button
-                  as='button'
-                  style='icon-only'
-                  onClick={() => {
-                    console.log('trigger disqualify mutation')
-                  }}
-                >
-                  <Icon
-                    style='icon-disqualified'
-                    color='brand-red'
-                    size='md'
-                    space='right'
-                  />
-                  <Text
-                    as='span'
-                    style='detail'
-                    color='dark-blue'
-                    weight='semibold'
-                  >
-                    Disqualify Contact
-                  </Text>
-                </Button>
-              </li>
-            </ul>
-          </Flyout>
-        </div>
-      </div>
       <br />
       <br />
-      Contact DBA disabled (default)
+      Default Disabled
+      <br />
       <br />
       <div className={styles.container}>
         <Button

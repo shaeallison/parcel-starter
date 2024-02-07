@@ -92,6 +92,10 @@
   align-items: center;
 }
 
+.align-top {
+  align-items: flex-start;
+}
+
 .flex-start {
   align-items: flex-start;
 }

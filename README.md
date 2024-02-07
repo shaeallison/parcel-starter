@@ -1,4 +1,4 @@
-# Parcel Start App
+# Parcel Starter App
 
 ## Getting Started
 
