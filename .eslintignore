@@ -1,0 +1,3 @@
+node_modules
+dist
+src/__generated__/fragment-masking.ts

@@ -1,0 +1,76 @@
+/*
+  Heading:
+  Component Styles
+*/
+
+/* Page Title */
+.one {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  line-height: 1;
+}
+
+/* Page Subheading and Card Title */
+.two {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01rem;
+  line-height: 1.2;
+}
+
+/* Modal Title */
+.three {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01rem;
+  line-height: 1;
+}
+
+/* Lonely list */
+.four {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01rem;
+  line-height: 1;
+}
+
+/*
+  Text:
+  Component Styles
+*/
+
+/* Avatar, List Aggregate Data, Saved Status, Address */
+.detail {
+  font-size: 1.5rem;
+  letter-spacing: -0.01rem;
+  line-height: 1.73; /* needed for address text -- move to company scss if needed */
+  text-align: left;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.note {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.nav-text {
+  font-size: 1.8rem;
+  letter-spacing: 0.04rem;
+  line-height: 1;
+}
+
+.title,
+.link {
+  display: block;
+  font-size: 1.8rem;
+  letter-spacing: -0.01rem;
+  line-height: 1;
+}
+
+.link {
+  text-decoration: underline;
+}

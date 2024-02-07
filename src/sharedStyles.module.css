@@ -1,0 +1,199 @@
+@import './base.css';
+
+/* Colors - add as needed */
+.dark-blue {
+  color: var(--dark-blue from global);
+}
+
+.black {
+  color: var(--black from global);
+}
+
+.brand-red {
+  color: var(--brand-red from global);
+}
+
+.bright-blue {
+  color: var(--bright-blue from global);
+}
+
+.brand-white-inactive {
+  color: var(--white-inactive from global);
+}
+
+.brand-white {
+  color: var(--white from global);
+}
+
+.bright-blue {
+  color: var(--bright-blue from global);
+}
+
+.dark-grey {
+  color: var(--dark-grey from global);
+}
+
+.grey-8 {
+  color: var(--grey-8 from global);
+}
+
+.text-red {
+  color: var(--text-red from global);
+}
+
+.text-green {
+  color: var(--text-green from global);
+}
+
+.icon-favorite {
+  color: var(--icon-favorite from global);
+}
+
+.icon-default {
+  color: var(--icon-default from global);
+}
+
+.icon-warn {
+  color: var(--icon-warn from global);
+}
+
+.icon-success {
+  color: var(--icon-success from global);
+}
+
+.disabled-check {
+  color: var(--disabled-check from global);
+}
+
+/* Font Weights */
+.regular {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Layout */
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+/* Accessibility Utilities */
+/* screen reader only - visually hidden */
+.u-sr-only {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form Styles */
+/* TODO: add radio and checkbox */
+.label {
+  display: inline-block;
+  width: auto;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+
+  &.required {
+    position: relative;
+
+    &::after {
+      content: '*';
+      position: absolute;
+      color: var(--brand-red from global);
+      right: -1rem;
+      top: -0.1rem;
+    }
+  }
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 1.3rem;
+  border-width: 0 0 0.2rem 0;
+  border-color: var(--grey-5 from global);
+}
+
+.error {
+  background-color: var(--brand-red-light from global);
+  border-width: 0 0 0.2rem;
+  border-color: var(--brand-red from global);
+  opacity: 1;
+}
+
+.input:read-only,
+.select:disabled,
+.textarea:read-only {
+  background-color: var(--grey-1 from global);
+  color: var(--grey-6 from global);
+  opacity: 1;
+}
+
+.textarea {
+  min-height: 8rem;
+  overflow-y: auto;
+  resize: none;
+  line-height: 1.3;
+}
+
+/* Misc useful classes */
+.hyperlink {
+  border-bottom: 0.1rem solid var(--bright-blue from global);
+  color: var(--bright-blue from global);
+}
+
+.container {
+  border: var(--border-call-list from global);
+  border-radius: 0.1rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Flyout-related Styles -- putting here bc there is a lot of variation w/ components surrounding flyout, but these styles can be shared */
+.flyout-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.flyout-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}

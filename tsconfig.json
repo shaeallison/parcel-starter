@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./global.d.ts",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "isolatedModules": true
+  },
+  "include": ["src", "globals.d.ts"],
+}

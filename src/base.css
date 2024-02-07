@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variables */
+:root {
+  /* colors */
+  --brand-red: #d0021b;
+  --brand-red-light: #f9efef;
+  --white: #ffffff;
+  --black: #000000;
+  --grey-1: #fafafa;
+  --grey-2: #f9f9f9;
+  --grey-3: #e9ebee;
+  --grey-4: #f4f4f4;
+  --grey-5: #666666; /* form placeholder text */
+  --grey-6: #686f84;
+  --grey-7: #cccccc;
+  --grey-8: #444444;
+  --grey-9: #dddddd;
+  --grey-10: #f2f2f2;
+  --timezone-tag: #dfe3e9;
+  --table-header: #404555;
+
+  /* text and misc */
+  --dark-blue: #313648;
+  --text-red: #b70016;
+  --text-green: #407100;
+  --bright-blue: #09377c;
+  --dark-grey: #333333;
+
+  /* borders */
+  --border-call-list: 0.1rem solid #dddddd;
+  --border-avatar: 0.2rem solid var(--dark-grey); /* also company contacts text */
+  --border-form-inputs: 0.2rem solid var(--grey-5);
+  --border-active-list: 0.6rem solid var(--brand-red);
+  --border-leads-list: 0.6rem solid var(--grey-6);
+  --border-add-button: 0.1rem solid #808288;
+  --border-add-contact: 0.1rem solid #707483; /* also for select input borders */
+  --border-select-btm: 0.2rem solid #5c7199;
+  --border-table: 0.1rem solid var(--grey-9);
+
+  /* forms */
+  --disabled-radio: #999999;
+  --disabled-check: #888888;
+  --input-radio-check: #ab0015;
+
+  /* icons */
+  --icon-favorite: #c28b00;
+  --icon-default: #383a42; /* tooltip text */
+  --icon-success: #4e8a00;
+
+  /* shadows */
+  --shadow-nav: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.35);
+  --shadow-tag: 0 0.1rem 0 0 #a8aab1;
+  --shadow-modal: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  --shadow-flyout: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.3);
+  --shadow-tooltip: 0 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  --shadow-error: rgba(102, 0, 12, 0.3);
+  --shadow-warn: rgba(89, 47, 0, 0.3);
+  --shadow-success: rgba(25, 52, 0, 0.3);
+  --shadow-info: rgba(25, 52, 0, 0.3);
+
+  /* alerts */
+  --fill-error: #f8eaec;
+  --fill-warn: #fcf4d7;
+  --fill-success: #f0f7e5;
+  --fill-info: #f5f7fb;
+  --icon-warn: #b46300;
+  --icon-success: #3d6b00;
+
+  /* table header sort icons */
+  --white-inactive: #868ca4;
+
+  /* misc */
+  --contact-row-left-padding: 2rem;
+}
+
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+menu,
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 62.5%; /* equates to 10px on most browsers which makes easy math for rems */
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--black);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Override per PO request despite being against a11y best practice and browser defaults */
+a,
+button {
+  cursor: pointer;
+}
+
+/* Overflow Utility */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.form {
+  display: block !important;
+}
+.form:has(.error) {
+  background-color: #f9efef;
+}

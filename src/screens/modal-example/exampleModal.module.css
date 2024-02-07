@@ -1,0 +1,4 @@
+.cancel {
+  background-color: var(--grey-5 from global);
+  margin-left: 2rem;
+}
