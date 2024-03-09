@@ -41,7 +41,7 @@
   "scripts": {
     "pre-commit": "npm run format && npm run lint",
     "rm-parcel-cache": "rm -rf '.parcel-cache'",
-    "start": "npm run rm-parcel-cache && parcel -p 3000",
+    "start": "npm run rm-parcel-cache && parcel -p 1234",
     "build": "npm run rm-parcel-cache && parcel build",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
     "lint-watch": "npx esw -w src/**/*.{js,jsx,ts,tsx}",
