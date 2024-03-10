@@ -40,5 +40,9 @@ node_modules/
 .cache
 .parcel-cache
 
+# jest
+jest/
+*.snap
+
 # MacOS files
 .DS_STORE
