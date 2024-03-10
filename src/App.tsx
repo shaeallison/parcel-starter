@@ -5,7 +5,7 @@ import { Button } from './components/Button/Button'
 const SampleScreen = () => {
   return (
     <div className={sharedStyles.container}>
-      <Button>Click Me!</Button>
+      <Button id='click-id'>Click Me!</Button>
     </div>
   )
 }

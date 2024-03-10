@@ -1,24 +1,26 @@
-import renderer from 'react-test-renderer'
+/**
+ * @jest-environment jsdom
+ */
+
+import { act, create } from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import { Button } from './Button'
 
-it('changes the class when hovered', () => {
-  const component = renderer.create(<Button id='test-id'>Facebook</Button>)
-  let tree = component.toJSON()
+it('click button, see message change', () => {
+  const component = <Button id='test-id'>Click Me!</Button>
+  let tree = create(component)
+  const { getByText } = render(component)
+
   expect(tree).toMatchSnapshot()
 
-  // // manually trigger the callback
-  // renderer.act(() => {
-  //   tree.props.onMouseEnter()
-  // })
-  // // re-rendering
-  // tree = component.toJSON()
-  // expect(tree).toMatchSnapshot()
+  // Initial message
+  expect(getByText('Try Clicking..'))
 
-  // // manually trigger the callback
-  // renderer.act(() => {
-  //   tree.props.onMouseLeave()
-  // })
-  // // re-rendering
-  // tree = component.toJSON()
-  // expect(tree).toMatchSnapshot()
+  // manually trigger click
+  act(() => {
+    getByText('Click Me!').click()
+  })
+
+  // Second message
+  expect(getByText('Thanks for Clicking!'))
 })

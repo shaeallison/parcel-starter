@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`click button, see message 1`] = `
+[
+  <button
+    id="test-id"
+    onClick={[Function]}
+  >
+    Click Me!
+  </button>,
+  <p>
+    Try Clicking..
+  </p>,
+]
+`;
