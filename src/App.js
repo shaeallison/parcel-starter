@@ -1,4 +1,4 @@
-import * as sharedStyles from './shared.module.css'
+import * as sharedStyles from './shared.module.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Button } from './components/Button/Button'
 
