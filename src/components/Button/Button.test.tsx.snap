@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`click button, see message 1`] = `
+exports[`click button, see message change 1`] = `
 [
   <button
     id="test-id"
