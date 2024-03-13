@@ -2,9 +2,7 @@ import * as sharedStyles from './shared.module.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Button } from './components/Button/Button'
 import Dogs from './screens/dogs/Dogs'
-import Forecast from './screens/forecast/Forecast'
 import SpellFinder from './screens/spells/SpellFinder'
-import SpellFinderTest from './screens/spellsTest/SpellFinder'
 import Component from './components/Component/Component'
 
 const SampleScreen = () => {
@@ -23,9 +21,7 @@ export function App() {
           <Routes>
             <Route path='/' element={<SampleScreen />}></Route>
             <Route path='/dogs' element={<Dogs />}></Route>
-            <Route path='/forecast' element={<Forecast />}></Route>
             <Route path='/spells' element={<SpellFinder />}></Route>
-            <Route path='/spells-test' element={<SpellFinderTest />}></Route>
             <Route path='/stripe' element={<Component />}></Route>
           </Routes>
         </main>
