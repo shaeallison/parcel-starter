@@ -5,32 +5,22 @@ import { useState } from 'react'
 
 export function narrowSpells(
   allSpellData: SpellDataType[],
-  name: string | null,
-  damageMin: string | null,
-  coolDownMax: string | null
+  name: string | null
 ): SpellDataType[] {
   return allSpellData.filter((spell) => {
     const includesName =
       (name?.toLowerCase() &&
         spell.name.toLowerCase().includes(name.toLowerCase())) ||
       name === null
-    const greaterThanDamageMin =
-      spell.damage >= Number(damageMin) || damageMin === null
-    const lessThanCoolDownMax =
-      spell.coolDown <= Number(coolDownMax) || coolDownMax === null
 
-    return includesName && greaterThanDamageMin && lessThanCoolDownMax
+    return includesName
   })
 }
 
 function TableFilters({
-  setName,
-  setCoolDownMax,
-  setDamageMin
+  setName
 }: {
   setName: (value: string | null) => void
-  setCoolDownMax: (value: string | null) => void
-  setDamageMin: (value: string | null) => void
 }): JSX.Element {
   return (
     <form className={styles.form}>
@@ -42,34 +32,6 @@ function TableFilters({
           placeholder='Accio'
           onChange={(e) =>
             e.target.value !== '' ? setName(e.target.value) : setName(null)
-          }
-        />
-      </div>
-
-      <div className={styles['form-item']}>
-        <label htmlFor='damage-min'>Damage Min</label>
-        <input
-          id='damage-min'
-          type='number'
-          placeholder='30'
-          onChange={(e) =>
-            e.target.value !== ''
-              ? setDamageMin(e.target.value)
-              : setDamageMin(null)
-          }
-        />
-      </div>
-
-      <div className={styles['form-item']}>
-        <label htmlFor='cooldown-max'>Cooldown Max</label>
-        <input
-          id='cooldown-max'
-          type='number'
-          placeholder='100'
-          onChange={(e) =>
-            e.target.value !== ''
-              ? setCoolDownMax(e.target.value)
-              : setCoolDownMax(null)
           }
         />
       </div>
@@ -96,23 +58,12 @@ function SpellTable({
   allSpellData: SpellDataType[]
 }): JSX.Element {
   const [name, setName] = useState<string | null>(null)
-  const [damageMin, setDamageMin] = useState<string | null>(null)
-  const [coolDownMax, setCoolDownMax] = useState<string | null>(null)
 
-  const narrowedSpells = narrowSpells(
-    allSpellData,
-    name,
-    damageMin,
-    coolDownMax
-  )
+  const narrowedSpells = narrowSpells(allSpellData, name)
 
   return (
     <>
-      <TableFilters
-        setName={setName}
-        setDamageMin={setDamageMin}
-        setCoolDownMax={setCoolDownMax}
-      />
+      <TableFilters setName={setName} />
       <table className={styles.table}>
         <thead>
           <tr>
