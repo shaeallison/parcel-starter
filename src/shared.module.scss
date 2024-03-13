@@ -3,3 +3,30 @@
   margin: auto;
   padding: 2rem;
 }
+
+.heading {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.image {
+  max-width: 30rem;
+  max-height: 30rem;
+  width: auto;
+  height: auto;
+}

@@ -19,7 +19,6 @@ export default async function getRequest(
     })
     return await response.json()
   } catch (err) {
-    // catch error with fetch
     // console.log(err)
     throw err
   }

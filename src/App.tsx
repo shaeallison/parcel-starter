@@ -5,6 +5,7 @@ import Dogs from './screens/dogs/Dogs'
 import Forecast from './screens/forecast/Forecast'
 import SpellFinder from './screens/spells/SpellFinder'
 import SpellFinderTest from './screens/spellsTest/SpellFinder'
+import Component from './components/Component/Component'
 
 const SampleScreen = () => {
   return (
@@ -13,13 +14,6 @@ const SampleScreen = () => {
     </div>
   )
 }
-
-/**
- * TODO:
- * upgrade node
- * remove snapshots?
- * use _.orderBy and other sorts/filters from lodash on dog data
- */
 
 export function App() {
   return (
@@ -32,6 +26,7 @@ export function App() {
             <Route path='/forecast' element={<Forecast />}></Route>
             <Route path='/spells' element={<SpellFinder />}></Route>
             <Route path='/spells-test' element={<SpellFinderTest />}></Route>
+            <Route path='/stripe' element={<Component />}></Route>
           </Routes>
         </main>
       </Router>

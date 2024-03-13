@@ -77,15 +77,9 @@ function TableFilters({
   )
 }
 
-function TableRow({
-  rowData,
-  color
-}: {
-  rowData: SpellDataType
-  color: string
-}): JSX.Element {
+function TableRow({ rowData }: { rowData: SpellDataType }): JSX.Element {
   return (
-    <tr className={styles[color]}>
+    <tr>
       <td>{rowData.name}</td>
       <td>{rowData.damage}</td>
       <td>{rowData.coolDown}</td>
@@ -112,31 +106,6 @@ function SpellTable({
     coolDownMax
   )
 
-  // TODO: write test cases
-  function getHighestLowest(
-    narrowedSpells: Array<SpellDataType>
-  ): Record<string, number> {
-    if (narrowedSpells.length === 0) {
-      return { high: -1, low: -1 }
-    } else {
-      let highestDamage = narrowedSpells[0].damage
-      let lowestDamage = narrowedSpells[0].damage
-
-      narrowedSpells.forEach((spell) => {
-        if (spell.damage > highestDamage) {
-          highestDamage = spell.damage
-        }
-        if (spell.damage < lowestDamage) {
-          lowestDamage = spell.damage
-        }
-      })
-
-      return { high: highestDamage, low: lowestDamage }
-    }
-  }
-
-  const highLow = getHighestLowest(narrowedSpells)
-
   return (
     <>
       <TableFilters
@@ -157,13 +126,7 @@ function SpellTable({
         </thead>
         <tbody>
           {narrowedSpells.map((spell) => {
-            let color = ''
-            if (highLow.high === spell.damage) {
-              color = 'red'
-            } else if (highLow.low === spell.damage) {
-              color = 'blue'
-            }
-            return <TableRow rowData={spell} key={spell.name} color={color} />
+            return <TableRow rowData={spell} key={spell.name} />
           })}
         </tbody>
       </table>

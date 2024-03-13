@@ -19,20 +19,14 @@
 
 .form {
   display: flex;
+  flex-wrap: wrap;
 
   .form-item {
     margin-right: 2rem;
+    margin-bottom: 1rem;
     label {
       display: block;
       margin-bottom: 1rem;
     }
   }
-}
-
-.red {
-  background-color: rgb(237, 142, 142);
-}
-
-.blue {
-  background-color: rgb(107, 107, 246);
 }

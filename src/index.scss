@@ -178,6 +178,20 @@ svg {
   max-width: 100%;
 }
 
+table {
+  width: 100%;
+  text-align: left;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table th,
+table td {
+  padding: 1rem;
+}
+
 input,
 button,
 textarea,
