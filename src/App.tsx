@@ -4,6 +4,7 @@ import { Button } from './components/Button/Button'
 import Dogs from './screens/dogs/Dogs'
 import Forecast from './screens/forecast/Forecast'
 import SpellFinder from './screens/spells/SpellFinder'
+import SpellFinderTest from './screens/spellsTest/SpellFinder'
 
 const SampleScreen = () => {
   return (
@@ -30,6 +31,7 @@ export function App() {
             <Route path='/dogs' element={<Dogs />}></Route>
             <Route path='/forecast' element={<Forecast />}></Route>
             <Route path='/spells' element={<SpellFinder />}></Route>
+            <Route path='/spells-test' element={<SpellFinderTest />}></Route>
           </Routes>
         </main>
       </Router>
